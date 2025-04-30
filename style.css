@@ -1,0 +1,201 @@
+* {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+}
+
+.usernames {
+    display: flex;
+    margin-top: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 50px; 
+    padding-top: 20px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.add {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.add:hover {
+    background-color: #45a049;
+}
+
+.dificult {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -45px;
+    gap: 10px;
+    padding-right: 50px;
+    margin-right: 100px;
+
+    & button {
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 40px;
+    }
+
+    .easy {
+        background-color: #4CAF50;
+    }
+
+    .medium {
+        background-color: #FFA500;
+    }
+
+    .hard {
+        background-color: #FF4500;
+    }
+
+    .extreme {
+        background-color: #ff0000;
+    }
+
+    .easy:hover {
+        background-color: #45a049;
+    }
+
+    .medium:hover {
+        background-color: #FF8C00;
+    }
+
+    .hard:hover {
+        background-color: #FF6347;
+    }
+
+    .extreme:hover {
+        background-color: #e41c1ce5;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.users {
+    margin-left: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+    
+.rules {
+    margin-top: 20px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 500px;
+    
+
+    & h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 25px;
+        margin-left: 40px;
+    }
+
+    & p {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+}
+
+.torf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+    padding-left: 50px; 
+    padding-top: 200px;
+}
+
+
+.truth {
+    width: 100px;
+    height: 50px;
+    border-radius: 15%;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.challenge {
+    width: 100px;
+    height: 50px;
+    border-radius: 15%;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.truth:hover {
+    background-color: #45a049;
+}
+
+.challenge:hover {
+    background-color: #45a049;
+}
+
+.questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.questions h3 {
+    background-color: #ffffff;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    word-wrap: break-word;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.questions h3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdade ou desafio do guiga's</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="usernames">
+        <input type="text" id="nomeInput" placeholder="Digite o nome">
+        <button class="add" onclick="adicionarNome()">Adicionar Nome</button>
+    </div>
+
+    <div class="dificult">
+        <button class="easy">Fácil</button>
+        <button class="medium">Médio</button>
+        <button class="hard">Difícil</button>
+        <button class="extreme">Extremo</button>
+    </div>
+
+    <div class="content">
+
+        <div class="users">
+            <ul id="listaDeNomes"></ul>
+        </div>
+
+        <div class="questions">
+
+        </div>
+
+        <div>
+            <button class="start">Começar</button>
+            <button class="reset">Reiniciar</button>
+            <button class="next">Próximo</button>
+        </div>
+
+        <div class="rules">
+            <h2>Regras</h2>
+            <p>1. Cada jogador deve adicionar seu nome.</p>
+            <p>2. O jogo consiste em escolher entre verdade ou desafio.</p>
+            <p>3. O jogador deve cumprir o desafio ou responder a verdade.</p>
+            <p>4. O jogo continua até que todos tenham jogado.</p>
+            <p>5. Quem nao cumprir o desafio vira dois shots</p>
+            <p>6. Quem não falar a verdade vira um shot</p>
+        </div>
+    </div>
+
+    <div class="torf">
+
+        <button class="truth">Verdade</button>
+        <h2>ou</h2>
+        <button class="challenge">Desafio</button>
+
+    </div>
+
+    <script>
+        // Lista para armazenar os nomes
+        const nomes = [];
+
+        function adicionarNome() {
+            const input = document.getElementById("nomeInput");
+            const nome = input.value.trim();
+
+            if (nome && nomes.length < 6) {
+                nomes.push(nome); // Adiciona o nome na lista
+                atualizarLista(); // Atualiza a lista na tela
+                input.value = ""; // Limpa o campo de input
+            } else if (nomes.length >= 6) {
+                alert("Você já adicionou 6 nomes.");
+            }
+        }
+
+        function atualizarLista() {
+            const lista = document.getElementById("listaDeNomes");
+            lista.innerHTML = ""; // Limpa a lista atual
+
+            // Cria os itens da lista novamente
+            for (let i = 0; i < nomes.length; i++) {
+                const li = document.createElement("li");
+                li.textContent = `${i + 1}. ${nomes[i]}`;
+                lista.appendChild(li);
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
